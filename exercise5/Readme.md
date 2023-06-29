@@ -1,10 +1,15 @@
-<h1 align="center">:file_cabinet: Exemplo de README.md</h1>
+<h1 align="center">:file_cabinet: Veiculos API</h1>
 
 ## :memo: Descrição
 Esta é uma API que permite o a gestão de veículos.
 
 ## :books: Funcionalidades
-* <b>Funcionalidade 1</b>: O que essa funcionalidade faz?
+* <b>Cadastro de Veículo</b>:Permite cadastrar um veículo
+* <b>Buscar um véiculo</b>: Permite buscar um veículo por id
+* <b>Buscar todos os veiculos</b>: Retorna todos os veículos
+* <b>Buscar os veículos baseados em parãmetros</b>: Busca veículos baseados em parâmetros como ano, marca, etc
+* <b>Permite atualizar veículos</b>: Permite atualizar parcialmente ou completamente um veículo
+* <b>Exclui um veículo</b>: Permite deletar um veículo da base de dados
 
 ## :wrench: Tecnologias utilizadas
 - Java 17;
@@ -25,8 +30,23 @@ Esta é uma API que permite o a gestão de veículos.
 - Java 17
 
 ## :rocket: Rodando o projeto
-Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
+Para rodar o repositório é necessário clonar o mesmo,  e o no diretório raiz dar o seguinte comando para iniciar o projeto:
 ```
-<linha de comando>
+./mvnw clean package spring-boot:repackage
+```
+Depois:
+```
+docker build -t vehicles/api .
+```
+```
+docker build -t vehicles/api .
 ```
 
+Apos isso a aplicação estará disponível no seguinte endereço: http://localhost:8080
+
+## :hourglass:	Testando o projeto
+
+A aplicação conta com o swagger-ui e todo o detalhamento dos endpoints podem ser testados e visualizados no seguinte endereço: 
+http://localhost:8080/swagger-ui/index.html
+
+<img src="https://i.ibb.co/JvK2qB5/print-swagger.jpg" alt="print-swagger" border="0">
